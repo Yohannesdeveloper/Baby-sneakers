@@ -150,11 +150,8 @@ const AddProduct: React.FC = () => {
 
     if (isEditing) {
       try {
-        const updated = await updateProduct(
-          effectiveEditId.toString(),
-          newProduct,
-          image || undefined
-        );
+       await updateProduct(effectiveEditId.toString(), newProduct, image || undefined);
+
         // After successful API update, fetch all products to sync with server
         const allProducts = await fetchProducts();
         const mapped = allProducts.map((p: any) => ({
