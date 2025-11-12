@@ -22,7 +22,7 @@ if (typeof window !== "undefined") {
     try {
       const state = store.getState();
       // Store product images separately to avoid quota issues
-      const productImages: { [key: number]: string } = {};
+      const productImages: { [key: string]: string } = {};
       const productsToPersist = state.products.products.map((product) => {
         if (product.image) {
           productImages[product.id] = product.image;
