@@ -96,7 +96,7 @@ const Checkout: React.FC = () => {
                 disabled={isSubmitting}
                 className="w-full bg-gradient-to-r from-fuchsia-600 to-cyan-500 hover:opacity-90 disabled:opacity-60 text-white font-medium py-3 px-4 rounded-md transition-all duration-300"
               >
-                {paymentLink ? "Pay with Stripe" : "Place Order (Demo)"}
+                {paymentLink ? "Pay with Stripe" : "Place Order "}
               </button>
               {!paymentLink && (
                 <p className="text-xs text-gray-600 dark:text-gray-400">Add a Stripe Payment Link in <code>VITE_STRIPE_PAYMENT_LINK</code> to enable real payments.</p>
